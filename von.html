@@ -2,7 +2,8 @@
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
-<title>chao chao ư ?!!?</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>chao chao???</title>
 
 <style>
 body {
@@ -11,16 +12,15 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   margin: 0;
-  color: white;
-  font-family: Arial;
+  font-family: Arial, sans-serif;
 }
 
 /* khung cầu vồng */
 .rainbow-frame {
-  padding: 8px;
-  border-radius: 20px;
+  padding: 10px;
+  border-radius: 25px;
   background: linear-gradient(
     270deg,
     red,
@@ -36,44 +36,73 @@ body {
   animation: rainbowMove 6s linear infinite;
 
   box-shadow:
-    0 0 10px red,
-    0 0 20px orange,
-    0 0 30px yellow,
-    0 0 40px cyan,
-    0 0 50px blue,
-    0 0 60px violet;
+    0 0 15px red,
+    0 0 30px orange,
+    0 0 45px yellow,
+    0 0 60px cyan,
+    0 0 75px blue,
+    0 0 90px violet;
 }
 
+/* ảnh responsive mobile */
 .rainbow-frame img {
   display: block;
-  width: 300px;
-  border-radius: 15px;
+  width: 90vw;
+  max-width: 500px;
+  border-radius: 20px;
 }
 
+/* nút download */
+.download-btn {
+  margin-top: 20px;
+  padding: 14px 30px;
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
+  border-radius: 15px;
+
+  background: linear-gradient(
+    270deg,
+    red,
+    orange,
+    yellow,
+    lime,
+    cyan,
+    blue,
+    violet,
+    red
+  );
+  background-size: 400%;
+
+  animation: rainbowMove 6s linear infinite;
+
+  box-shadow: 0 0 15px cyan;
+}
+
+.download-btn:active {
+  transform: scale(0.95);
+}
+
+/* animation */
 @keyframes rainbowMove {
   0% { background-position: 0% }
   100% { background-position: 400% }
 }
 
-/* nút quay lại */
-.back {
-  margin-top: 20px;
-  padding: 10px 20px;
-  background: #238636;
-  border-radius: 10px;
-  color: white;
-  text-decoration: none;
-}
 </style>
 
 </head>
 <body>
 
-<h2>gần giống chao chao</h2>
-
 <div class="rainbow-frame">
   <img src="ảnh/von/Chinese 02003917.jpg">
 </div>
+
+<a class="download-btn"
+   href="ảnh/von/Chinese 02003917.jpg"
+   download>
+   Download
+</a>
 
 </body>
 </html>
