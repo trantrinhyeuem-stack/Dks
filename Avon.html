@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Rainbow Border Image</title>
+
+<style>
+body {
+  background: #0d1117;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+/* Khung viền cầu vồng */
+.rainbow-frame {
+  padding: 8px;
+  border-radius: 20px;
+  background: linear-gradient(
+    270deg,
+    red,
+    orange,
+    yellow,
+    lime,
+    cyan,
+    blue,
+    violet,
+    red
+  );
+  background-size: 400% 400%;
+  animation: rainbowMove 6s linear infinite;
+
+  /* hiệu ứng glow */
+  box-shadow:
+    0 0 10px red,
+    0 0 20px orange,
+    0 0 30px yellow,
+    0 0 40px cyan,
+    0 0 50px blue,
+    0 0 60px violet;
+}
+
+/* ảnh bên trong */
+.rainbow-frame img {
+  display: block;
+  width: 300px;
+  height: auto;
+  border-radius: 15px;
+}
+
+/* animation */
+@keyframes rainbowMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 400% 50%;
+  }
+}
+</style>
+
+</head>
+<body>
+
+<div class="rainbow-frame">
+  <img src="Chinese 02003917.jpg" alt="Rainbow Image">
+</div>
+
+</body>
+</html>
